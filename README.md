@@ -24,7 +24,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 ### Links
 
 - Solution URL:https://github.com/ssenyondo67/rock-paper-scissors-master
-- Live Site URL: https://results-summary-component-main.vercel.app/
+- Live Site URL:https://rock-paper-scissors-master-ssenyondo67.vercel.app/
 
 ## My process
 
