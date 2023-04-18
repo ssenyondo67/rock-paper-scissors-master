@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center;  }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="switch-to-bonus">
+      <button class="switch-btn btn" id="switchToBonus">Switch <span>To</span> Bonus</button>
+    </div>
+    <div class="container">
+       <div class="display-board">
+         <img src="./images/logo.svg" alt="title" class="title" id="imageTitle">
+        <div class="score-card">
+          <span class="score-title">SCORE</span>
+          <span class="score-value" id="scoreValue">0</span>
+        </div>
+       </div>
+       <div class="pick-container center-item">
+        <div class="pick-option pick-place show-pick " id="pickOption">
+          <div class="pick-triangle center-item" id="pickTriangle">
+            <div class="image-container triangle">
+              <img src="./images/bg-triangle.svg" alt="triangle" class="triangle-image">              
+               <button class="pick-outer-edge triangle-paper" id="paper"  onclick="personPick(this.id)">
+                <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="./images/icon-paper.svg" alt="paper" class="pick-image" id="pickImage" >
+                  </div>
+                </div>
+              </button>
+               <button class="pick-outer-edge triangle-scissors" id="scissors" onclick="personPick(this.id)">
+                <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="./images/icon-scissors.svg" alt="Scissors" class="pick-image" id="pickImage">
+                  </div>
+                </div>
+              </button>
+              <button class="pick-outer-edge triangle-rock" id="rock" onclick="personPick(this.id)">
+                <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="./images/icon-rock.svg" alt="rock" class="pick-image" id="pickImage">
+                  </div>
+                </div>
+              </button>
+            </div>
+
+          </div>
+          <div class="show-bonus pick-pentagon  center-item" id="pickPentagon">
+            <div class="image-container pentagon">
+              <img src="./images/bg-pentagon.svg" alt="triangle" class="pentagon-image">              
+               <button class="pick-outer-edge pentagon-paper" id="paper" onclick="personPick(this.id)">
+                <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="./images/icon-paper.svg" alt="paper" class="pick-image" id="pickImage">
+                  </div>
+                </div>
+              </button>
+               <div class="pick-outer-edge pentagon-scissors" id="scissors" onclick="personPick(this.id)">
+               <div class="before center-item">
+                <div class="pick-inner-edge">
+                  <img src="./images/icon-scissors.svg" alt="Scissors" class="pick-image" id="pickImage">
+                </div>
+               </div>
+              </div>
+              <button class="pick-outer-edge pentagon-spock" id="spock" onclick="personPick(this.id)">
+                <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="./images/icon-spock.svg" alt="spock" class="pick-image" id="pickImage">
+                  </div>
+                </div>
+              </button>
+              <button class="pick-outer-edge pentagon-lizard" id="lizard" onclick="personPick(this.id)">
+                <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="./images/icon-lizard.svg" alt="lizard" class="pick-image" id="pickImage">
+                  </div>
+                </div>
+              </button>
+              <button class="pick-outer-edge pentagon-rock" id="rock" onclick="personPick(this.id)">
+               <div class="before center-item">
+                <div class="pick-inner-edge">
+                  <img src="./images/icon-rock.svg" alt="rock" class="pick-image" id="pickImage">
+                </div>
+               </div>
+              </button>
+            </div>
+          </div>
+        </div> 
+        <div class="pick-place person-pick " id="personPick">
+         <div class="flex-item">
+          <div class="pick personal-pick ">
+            <h3 class="pick-name">You Picked</h3>
+            <div class="pick-option-place">
+                <div class="pick-outer-edge ">
+                 <div class="before center-item">
+                  <div class="pick-inner-edge">
+                    <img src="" alt="" class="pick-image" id="personalPick">
+                  </div>
+                 </div>
+                </div>
+            </div>
+          </div>
+          <div class="pick house-pick">
+            <h3 class="pick-name">The House Picked</h3>
+            <div class="pick-option-place">
+                <div class="circle " ></div>
+              <div class="pick-outer-edge  hide">
+                <div class="before center-item">
+                 <div class="pick-inner-edge">
+                   <img src="" alt="" class="pick-image" id="homePick">
+                 </div>
+                </div>
+               </div>
+            </div>
+          </div>
+         </div>
+        </div>  
+        <div class="pick-place pick-result " id="pickResult">
+          <div class="grid">
+            <div class="pick personal-pick grid-item1">
+              <div class="win-bg-container hide"></div>
+              <h3 class="pick-name">You Picked</h3>
+              <div class="pick-option-place">
+                  <div class="pick-outer-edge  ">
+                   <div class="before center-item">
+                    <div class="pick-inner-edge">
+                      <img src="" alt="" class="pick-image" id="resultPersonalPick">
+                    </div>
+                   </div>
+                  </div>
+              </div>
+            </div>
+            <div class="result grid-item2" id="showResult">
+             <div class="result-container">
+              <h2 class="result-title" id="resultTittle">You Win</h2>
+              <button class="btn playBtn " id="playBtn" onclick="playAgain()">Play Again</button>
+             </div>
+            </div>
+            <div class="pick house-pick grid-item3">
+              <div class="win-bg-container hide"></div>
+              <h3 class="pick-name">The House Picked</h3>
+              <div class="pick-option-place">             
+                <div class="pick-outer-edge  ">
+                  <div class="before center-item">
+                   <div class="pick-inner-edge">
+                     <img src="" alt="" class="pick-image" id="resultHomePick">
+                   </div>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       </div>
+    </div>
+    <button class="rules-btn btn " id="rulesBtn">rules</button>
+    <div class="rules " id="rules">
+      <h2 class="rules-title">Rules</h2>
+      <div class="img-container">
+        <img src="./images/image-rules.svg" alt="rules" class="rules-image">
+      </div>
+      <button class="close-btn" id="closeBtn">
+        <img src="./images/icon-close.svg" alt="close" class="close">
+      </button>
+    </div>
+  </section>
+  <footer >
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">SSENYONDO MICHEAL</a>.
+  </div>
+</footer>
+<script src="./main.js"></script>
+</body>
+</html>
